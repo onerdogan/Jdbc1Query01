@@ -20,9 +20,9 @@ public class Jdbc1Query01 {
             System.out.println("personel ismi " +isim.getString("personel_isim")+" maas "+isim.getInt("maas"));
         }
     //olusturan nesleri kaldiralim
-       // con.close();
-        //st.close();
-        //.close();
+       con.close();
+       st.close();
+       isim.close();
 
 
     }
