@@ -23,7 +23,7 @@ public class Jdbc1Query01 {
         con.close();
         st.close();
         isim.close();
-
+//ters
 
     }
 }
