@@ -49,7 +49,7 @@ public class Jdbc3DDL {
         System.out.println("isim sutunu eklendi");
 
         //ORNEK5:isciler tablosundaki maas sutunu siliniz.
-     //   st.execute("ALTER TABLE isciler DROP COLUMN maas");
+   //  //   st.execute("ALTER TABLE isciler DROP COLUMN maas");
         System.out.println(" sutun gitti");
         System.out.println("============================");
 
