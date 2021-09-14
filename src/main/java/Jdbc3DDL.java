@@ -56,7 +56,7 @@ public class Jdbc3DDL {
 
         //ORNEK6:isciler tablosunun adini calisanlar olarak degistiriniz.//
 
-        st.execute("ALTER TABLE isciler RENAME TO calisanlar");
+       // st.execute("ALTER TABLE isciler RENAME TO calisanlar");
         System.out.println("calisanlar oldu");
 
 
