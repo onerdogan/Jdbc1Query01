@@ -63,9 +63,9 @@ public class Jdbc5CRUD {
         System.out.println("islem tamam");
 
 
-       // st.close();
-       // con.close();
-       // pst.close();
+        // st.close();
+        // con.close();
+        // pst.close();
 
     }
-    }
+}

@@ -25,40 +25,41 @@ public class Jdbc3DDL {
 
         Class.forName("oracle.jdbc.driver.OracleDriver");
 
-        Connection con=	DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","hr");
+        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
 
-        Statement st=	con.createStatement();
+        Statement st = con.createStatement();
 
-       // ORNEK1:isciler adinda bir tablo olusturunuz id NUMBER(3),  birim VARCHAR2(10), maas NUMBER(5)
+        // ORNEK1:isciler adinda bir tablo olusturunuz id NUMBER(3),  birim VARCHAR2(10), maas NUMBER(5)
 
-  //     st.execute("CREATE TABLE isciler" +//st.executeUpdate("    ") la da olur
-  //              " (id NUMBER(3)," +
-  //              " birim VARCHAR(10)," +
-  //              " maas NUMBER(5))") ;
-       System.out.println("iscilet taplosu oldu");
-     System.out.println("============================");
+        //     st.execute("CREATE TABLE isciler" +//st.executeUpdate("    ") la da olur
+        //              " (id NUMBER(3)," +
+        //              " birim VARCHAR(10)," +
+        //              " maas NUMBER(5))") ;
+        System.out.println("iscilet taplosu oldu");
+        System.out.println("============================");
 // isciler tablosunu kalici olarak siliniz
-   // st.executeUpdate("drop table isciler PURGE");
-      // System.out.println("isciler sislindi");
+        // st.executeUpdate("drop table isciler PURGE");
+        // System.out.println("isciler sislindi");
 
-       // System.out.println("============================");
+        // System.out.println("============================");
         //ORNEK3:isciler tablosuna yeni bir sutun {isim Varchar2(20)} ekleyiniz.
 
-    //    st.executeUpdate("ALTER TABLE isciler ADD isim VARCHAR2(20)");
+        //    st.executeUpdate("ALTER TABLE isciler ADD isim VARCHAR2(20)");
 
         System.out.println("isim sutunu eklendi");
 
         //ORNEK5:isciler tablosundaki maas sutunu siliniz.
-   //  //   st.execute("ALTER TABLE isciler DROP COLUMN maas");
+        //  //   st.execute("ALTER TABLE isciler DROP COLUMN maas");
         System.out.println(" sutun gitti");
         System.out.println("============================");
 
 
         //ORNEK6:isciler tablosunun adini calisanlar olarak degistiriniz.//
 
-       // st.execute("ALTER TABLE isciler RENAME TO calisanlar");
+        // st.execute("ALTER TABLE isciler RENAME TO calisanlar");
         System.out.println("calisanlar oldu");
 
-
+        con.close();
+        st.close();
     }
 }

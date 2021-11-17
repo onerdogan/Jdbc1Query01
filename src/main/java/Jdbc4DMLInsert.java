@@ -1,26 +1,23 @@
-import javax.swing.*;
 import java.sql.*;
 
 public class Jdbc4DMLInsert {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         Class.forName("oracle.jdbc.driver.OracleDriver");
 
-        Connection con=	DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","hr");
+        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "hr");
 
-        Statement st=	con.createStatement();
+        Statement st = con.createStatement();
 
-      ResultSet rs=st.executeQuery("select * from bolumler");
-        while (rs.next()){
-            System.out.println(rs.getInt(1)+rs.getString(2)+rs.getString(3));
+        ResultSet rs = st.executeQuery("select * from bolumler");
+        while (rs.next()) {
+            System.out.println(rs.getInt(1) + rs.getString(2) + rs.getString(3));
         }
-
 
 
         //----------ORNEK1: Bolumler tablosuna yeni bir kayit (80, 'ARGE', 'ISTANBUL')
         //ekleyelim ve eklenen kaydi teyit icin sorgulayalim.
 
-       // st.execute("insert into bolumler values(80, 'ARGE','ISTANBUL')");
-
+        // st.execute("insert into bolumler values(80, 'ARGE','ISTANBUL')");
 
 
         //-------ORNEK2: Bolumler tablosuna birden fazla yeni kayıt ekleyelim.
@@ -57,17 +54,10 @@ public class Jdbc4DMLInsert {
         st.executeBatch();*/
 
 
-
-
-
         // 3. YONTEM
         //-----------------------------------------------------
         // batch metoduyla birlikte PreparedStatement kullanmak en efektif yontemdir.
         // bir sonraki ornekte bunu gerceklestirecegiz.
-
-
-
-
 
 
         con.close();
